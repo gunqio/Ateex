@@ -91,7 +91,7 @@ jobs:
           # 删除旧的
           for id in $run_ids; do
             echo "删除运行记录: $id"
-            gh run delete --repo "$REPO" $id --yes || true
+            gh run delete --repo "$REPO" $id || true
           done
           
           echo "✅ 清理完成"
